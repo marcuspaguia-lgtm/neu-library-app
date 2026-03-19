@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { collection, getDocs, doc, updateDoc, deleteDoc, addDoc, query, orderBy, serverTimestamp } from "firebase/firestore";
-import { db } from "./firebase";
-
+import { db } from "./firebase"; 
 function BorrowsTab() {
   const [borrows, setBorrows] = useState([]);
   const [loading, setLoading] = useState(true);
