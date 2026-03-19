@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { collection, addDoc, serverTimestamp, doc, getDoc, setDoc, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, provider, db } from "./firebase";
 import AdminDashboard from "./AdminDashboard";
 import "./index.css";
