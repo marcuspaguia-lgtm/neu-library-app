@@ -8,6 +8,9 @@ https://neu-library-app-eb94f.web.app
 ## GitHub Repository
 https://github.com/marcuspaguia-lgtm/neu-library-app
 
+## Live Demo
+🔗 [https://neu-library-app.vercel.app](https://neu-library-app.vercel.app)
+
 ## Features
 - Google Authentication (NEU institutional emails only)
 - Library check-in system
