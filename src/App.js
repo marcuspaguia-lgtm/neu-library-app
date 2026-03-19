@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { collection, addDoc, serverTimestamp, doc, getDoc, setDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, doc, getDoc, setDoc, getDocs, query, where, limit } from "firebase/firestore";
 import { auth, provider, db } from "./firebase";
 import AdminDashboard from "./AdminDashboard";
 import "./index.css";
@@ -277,7 +277,6 @@ function PastVisits({ userId }) {
   const [history, setHistory] = useState([]);
   useEffect(() => {
     const fetch = async () => {
-      const { getDocs, collection, query, where, limit } = await import("firebase/firestore");
       const q = query(collection(db, "visits"), where("userId", "==", userId), limit(5));
       const snap = await getDocs(q);
       setHistory(snap.docs.map(d => ({ id: d.id, ...d.data() })));
