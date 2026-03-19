@@ -515,4 +515,5 @@ export default function App() {
       <Footer setPage={setPage} />
     </div>
   );
-}
+}/ /   t r i g g e r   r e d e p l o y  
+ 
